@@ -1,0 +1,212 @@
+* {
+  margin: 0;                /* elimina el margen por defecto del navegador */
+  padding: 0;               /* elimina el relleno por defecto del navegador */
+  box-sizing: border-box;   /* el borde y relleno no agrandan el tamaño del elemento */
+}
+
+html, body {
+  height: 100vh;            /* ocupa el 100% de la altura de la pantalla */
+  overflow: hidden;         /* impide que la página completa haga scroll */
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* fuente general de toda la página */
+}
+
+/*NAV*/
+nav {
+  background: #2c2c2c;                        /* color de fondo oscuro */
+  padding: 15px 10px;                         /* espacio interno arriba/abajo y lados */
+  overflow: hidden;                           /* contiene los elementos flotantes internos */
+  border-bottom: 3px solid #e74c3c;          /* línea roja decorativa abajo del nav */
+}
+
+.nombre-nav {
+  float: left;              /* empuja el nombre al extremo izquierdo */
+  color: white;             /* color del texto */
+  font-size: 30px;          /* tamaño de la fuente */
+  font-weight: 300;         /* grosor fino de la fuente */
+  line-height: 1.6;         /* altura de línea para centrar verticalmente */
+}
+
+.nombre-nav strong {
+  font-weight: 700;         /* negrilla para el primer nombre */
+}
+
+.enlaces-nav {
+  float: right;             /* empuja los enlaces al extremo derecho */
+  line-height: 1.6;         /* altura de línea para alinear con el nombre */
+}
+
+.enlaces-nav a {
+  color: #cccccc;           /* color gris claro para los enlaces */
+  text-decoration: none;    /* quita el subrayado de los enlaces */
+  margin-left: 28px;        /* separación entre cada enlace */
+  font-size: 25px;          /* tamaño de fuente de los enlaces */
+  letter-spacing: 0.5px;    /* espacio entre letras */
+  transition: color 0.2s;   /* animación suave al cambiar de color */
+}
+
+.enlaces-nav a:hover,
+.enlaces-nav a.activo {
+  color: white;             /* color blanco al pasar el mouse o estar activo */
+  font-weight: 600;         /* un poco más grueso al estar activo */
+}
+
+/*MAIN*/
+main {
+  height: calc(100vh - 53px); /* altura total de pantalla menos el alto del nav */
+  overflow-y: auto;            /* solo este contenedor hace scroll vertical */
+}
+
+/*SECCIÓN 1 — INICIO*/
+.inicio {
+  background: #ffffff;      /* fondo blanco */
+  padding: 60px 80px;       /* espacio interno generoso */
+  overflow: hidden;         /* contiene los floats internos */
+  min-height: 420px;        /* altura mínima para que no quede muy pequeña */
+}
+
+.imagen-inicio {
+  float: left;              /* la imagen flota a la izquierda */
+  width: 45%;               /* ocupa el 45% del ancho */
+  text-align: center;       /* centra la imagen dentro del contenedor */
+  padding-top: 20px;        /* baja un poco la imagen */
+}
+
+.imagen-inicio img {
+  width: 100%;              /* la imagen ocupa todo el ancho de su contenedor */
+  max-width: 400px;         /* pero no más de 380px */
+}
+
+.texto-inicio {
+  float: right;             /* el texto flota a la derecha */
+  width: 50%;               /* ocupa el 50% del ancho */
+  padding-top: 40px;        /* baja el texto para centrarlo visualmente */
+}
+
+.texto-inicio h1 {
+  font-size: 52px;          /* título grande */
+  font-weight: 700;         /* negrilla */
+  color: #e74c3c;           /* color rojo */
+  margin-bottom: 20px;      /* espacio debajo del título */
+  line-height: 1.1;         /* altura de línea compacta */
+}
+
+.texto-inicio p {
+  font-size: 30px;          /* tamaño del párrafo */
+  color: #555;              /* gris oscuro para el texto */
+  line-height: 1.7;         /* altura de línea para legibilidad */
+  margin-bottom: 30px;      /* espacio antes del botón */
+}
+
+.boton-rojo {
+  background: #e74c3c;      /* fondo rojo */
+  color: white;             /* texto blanco */
+  border: none;             /* sin borde */
+  padding: 14px 28px;       /* espacio interno del botón */
+  font-size: 30px;          /* tamaño de texto del botón */
+  font-weight: 600;         /* texto semi-negrilla */
+  border-radius: 4px;       /* esquinas ligeramente redondeadas */
+  cursor: pointer;          /* cursor de manita al pasar el mouse */
+  text-decoration: none;    /* quita subrayado si es un enlace */
+  transition: background 0.2s; /* animación suave al hacer hover */
+}
+
+.boton-rojo:hover {
+  background: #c0392b;      /* rojo más oscuro al pasar el mouse */
+}
+
+/* SECCIÓN 2 — QUIEN SOY */
+.quien-soy {
+  background: #e74c3c;      /* fondo rojo */
+  padding: 60px 80px;       /* espacio interno */
+  text-align: center;       /* centra todo el contenido */
+}
+
+.foto-perfil {
+  width: 200px;             /* ancho fijo del avatar */
+  height: 200px;            /* alto fijo del avatar */
+  border-radius: 50%;       /* hace la imagen circular */
+  border: 6px solid white;  /* borde blanco alrededor del círculo */
+  margin: 0 auto 40px auto; /* centra horizontalmente y agrega espacio abajo */
+  object-fit: cover;        /* recorta la imagen sin deformarla */
+}
+
+.quien-soy blockquote {
+  font-size: 30px;          /* texto grande para la cita */
+  color: white;             /* texto blanco */
+  line-height: 1.7;         /* espaciado entre líneas */
+  max-width: 800px;         /* ancho máximo para que no sea tan ancho */
+  margin: 0 auto 16px auto; /* centra el bloque y agrega espacio abajo */
+}
+
+.quien-soy cite {
+  color: rgba(255,255,255,0.8); /* blanco semitransparente */
+  font-size: 15px;              /* tamaño pequeño para la firma */
+  font-style: italic;           /* cursiva para la firma */
+}
+
+/*SECCIÓN 3 — PROYECTOS*/
+.proyectos {
+  background: #f2f2f2;      /* fondo gris claro */
+  padding: 60px 40px;       /* espacio interno */
+  overflow: hidden;         /* contiene los floats de las tarjetas */
+}
+
+.proyectos h2 {
+  font-size: 38px;          /* título de sección grande */
+  font-weight: 700;         /* negrilla */
+  color: #333;              /* gris oscuro */
+  text-align: center;       /* centrado */
+  margin-bottom: 40px;      /* espacio antes de las tarjetas */
+}
+
+.contenedor-tarjetas {
+  overflow: hidden;         /* contiene los floats de las tarjetas */
+}
+
+.tarjeta {
+  float: left;              /* las tarjetas flotan una al lado de la otra */
+  width: 23%;               /* cada tarjeta ocupa el 23% del ancho */
+  margin-right: 2%;         /* separación entre tarjetas */
+  background: white;        /* fondo blanco */
+  border-radius: 4px;       /* esquinas redondeadas */
+  overflow: hidden;         /* recorta la imagen a las esquinas redondeadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+  text-align: center;       /* centra el contenido interno */
+}
+
+.tarjeta:last-child {
+  margin-right: 0;          /* la última tarjeta no tiene margen derecho */
+}
+
+.tarjeta img {
+  width: 100%;              /* la imagen ocupa todo el ancho de la tarjeta */
+  height: 320px;            /* altura fija para que todas queden iguales */
+  object-fit: cover;        /* recorta la imagen sin deformarla */
+}
+
+.cuerpo-tarjeta {
+  padding: 20px 16px;       /* espacio interno del texto de la tarjeta */
+}
+
+.cuerpo-tarjeta h3 {
+  font-size: 20px;          /* tamaño del título de la tarjeta */
+  font-weight: 600;         /* semi-negrilla */
+  color: #333;              /* gris oscuro */
+  margin-bottom: 12px;      /* espacio debajo del título */
+}
+
+.cuerpo-tarjeta p {
+  font-size: 20px;          /* texto pequeño de descripción */
+  color: #777;              /* gris medio */
+  line-height: 1.6;         /* espaciado entre líneas */
+  margin-bottom: 20px;      /* espacio antes del botón */
+}
+
+/*PIE DE PÁGINA*/
+footer {
+  background: #2c2c2c;      /* fondo oscuro igual que el nav */
+  color: #aaa;              /* texto gris claro */
+  text-align: center;       /* texto centrado */
+  padding: 24px;            /* espacio interno */
+  font-size: 20px;          /* texto pequeño */
+}
